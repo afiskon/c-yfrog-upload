@@ -1,0 +1,2 @@
+bin_PROGRAMS=yfrogupload
+shownotegen_SOURCES=yfrogupload.c
