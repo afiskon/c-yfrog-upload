@@ -79,11 +79,6 @@ int main(int argc, char* argv[])
 
     char* fname = argv[1];
 
-    char url[64];
-    srandom(time(0));
-    snprintf(url, sizeof(url),
-        "http://iload%u.imageshack.us/upload_api.php",
-        1 + ((unsigned int)random()) % 10);
     
     if(curl_global_init(CURL_GLOBAL_ALL) != 0)
     {
@@ -134,7 +129,7 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    curl_easy_setopt(curl, CURLOPT_URL, url);
+    curl_easy_setopt(curl, CURLOPT_URL, "http://imageshack.us/upload_api.php");
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writeCallback);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &ctx);
     curl_easy_setopt(curl, CURLOPT_HTTPHEADER, curlHeaders);
