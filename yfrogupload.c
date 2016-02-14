@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-#include <time.h>
 #include <curl/curl.h>
 
 #define USER_AGENT_STRING "User-Agent: Mozilla/5.0 (X11; Linux x86_64) " \
